@@ -1,5 +1,51 @@
+*{margin: 0;
+  box-sizing: border-box;
+  padding: 0;
 
+}
+html,body{
 
+  color: white;
+  background-color: black;
+  font-family: lato, sans-serif;
+  margin-top: 40px;
+
+}
+.aplicacion-tareas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center ;
+  align-items: center;
+}
+h1{
+  color: rgb(15, 48, 81);
+  font-size: 25px;
+  text-align: center;
+  margin: 20px 0;
+}
+.freecodecamp-logo-contenedor{
+
+  width: 200px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.freecodecamp-logo{
+  width: 400px;
+  height: 100px;
+}
+
+.tareas-lista-principal{
+width: 600px;
+min-height: 500px;
+background-color: rgb(213, 206, 206);
+padding: 25px;
+margin:10px;
+
+border-radius: 26px;
+
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
