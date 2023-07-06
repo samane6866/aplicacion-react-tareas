@@ -1,10 +1,13 @@
 import React from "react";
 import "../hojas-de-estilo/Tarea.css"
+import { AiFillCloseCircle} from "react-icons/ai";
 function Tarea({ texto }) {
   return (
     <div className="tarea-contenedor">
-      <div className="tarea-texto">{texto}</div>
-      <div className="tarea-icono">Eliminar</div>
+      <div className="tarea-texto">{texto ="Aprender React"}</div>
+          <div className="tarea-icono">
+          <AiFillCloseCircle/>
+      </div>
     </div>
   );
 }
