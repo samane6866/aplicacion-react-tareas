@@ -2,12 +2,16 @@ import react, { useState } from "react";
 import TareaFormulario from "./TareaFormulario";
 
 function ListaDeTarea() {
-  const [tarea, setTarea] = useState([]);
+  const [tareas, setTareas] = useState([]);
   return (
     <>
       <TareaFormulario />
-          <div className="tareas-lista-contenedor">
-              
+      <div className="tareas-lista-contenedor">
+        Lista de tareas
+              {
+                  tareas.map((tarea) =>
+                      <Tarea texto={tarea.texto } completada={tarea.completada} />)
+        }
       </div>
     </>
   );
