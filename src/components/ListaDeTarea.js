@@ -7,23 +7,24 @@ function ListaDeTarea() {
     
 
     // queremos que cuando hacemos click en button agregar tareas podemos agregar la tarea que ha escrito el usario a la lista de tareas 
-    const agregarTarea = tarea => {
-        console.log("tarea agregada")
-        console.log(tarea)
+  const agregarTarea = tarea => {
+    if (tarea.texto.trim()) {
+        tarea.texto=tarea.texto.trim()
+      }
+
+        // para actulizar las tareas nuevas que aprecen en primera de la lista
+    const tareaActualizadas = [tarea, ...tareas]
+    setTareas(tareaActualizadas)
+    
     }
-
-
-
-
-
   return (
     <>
-      <TareaFormulario />
+      <TareaFormulario onSubmit={agregarTarea} />
       <div className="tareas-lista-contenedor">
         Lista de tareas
               {
                   tareas.map((tarea) =>
-                      <Tarea texto={tarea.texto } completada={tarea.completada} />)
+                      <Tarea key={tarea.id} id={tarea.id} texto={tarea.texto } completada={tarea.completada} />)
         }
       </div>
     </>

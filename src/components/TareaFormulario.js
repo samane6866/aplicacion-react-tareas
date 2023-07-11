@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import "../hojas-de-estilo/Tareaformulario.css";
+import { v4 as uuidv4 } from "uuid";
 
 function TareaFormulario(props) {
   const [input, setInput] = useState("");
 
   const manejarCambio = (e) => {
-    setInput(e.target.value)
-    
+    setInput(e.target.value);
   };
 
   // este funcion va ser encargada de enviar el form(tarea) cuando hacemos click a button de agregar tarea el argumento e es muy importante aqui, ya que evita  de cargar la pagina despues de enviar form
   const manejarEnvio = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const tareaNueva = {
-      id: 3456,
+      id: uuidv4(),
       texto: input,
-      completada:false
+      completada: false,
     };
+    console.log(tareaNueva);
+    props.onSubmit(tareaNueva);
   };
   return (
     <form className="tarea-formulario" onSubmit={manejarEnvio}>
