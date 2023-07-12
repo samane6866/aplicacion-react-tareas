@@ -17,7 +17,7 @@ function ListaDeTarea() {
     setTareas(tareaActualizadas)
     
     }
-  return (
+  return ( 
     <>
       <TareaFormulario onSubmit={agregarTarea} />
       <div className="tareas-lista-contenedor">
